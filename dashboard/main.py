@@ -20,7 +20,7 @@ st.write(
 )
 
 # Load dataset
-all_df = pd.read_csv("../dashboard/DataBaru.csv") 
+all_df = pd.read_csv("dashboard/DataBaru.csv") 
 
 datetime_columns = ["dteday"]
 all_df.sort_values(by="dteday", inplace=True)
@@ -41,8 +41,16 @@ with st.sidebar:
         value=[min_date, max_date]
     )
 
+        # Filter berdasarkan weathersit
+    weather_options = all_df["weathersit"].unique().tolist()
+    selected_weather = st.multiselect(
+        "Pilih Kondisi Cuaca", weather_options, default=weather_options
+    )
+
 main_df = all_df[(all_df["dteday"] >= str(start_date)) & 
-                (all_df["dteday"] <= str(end_date))]
+                (all_df["dteday"] <= str(end_date))&
+                (all_df["weathersit"].isin(selected_weather))
+                ]
 
 # Visualisasi 1
 st.subheader('Perbandingan Peminjaman Sepeda: Hari Libur vs Hari kerja')
@@ -113,7 +121,7 @@ st.pyplot(fig)
 #Visualisasi 3
 st.subheader("Pola Peminjaman Sepeda per Jam")
 
-hr_df = pd.read_csv("../dataset/hour.csv") 
+hr_df = pd.read_csv("dataset/hour.csv") 
 
 # Grouping berdasarkan hari libur atau tidak
 holiday_group = hr_df.groupby(['holiday', 'hr'])['cnt'].mean().reset_index()
