@@ -20,7 +20,7 @@ st.write(
 )
 
 # Load dataset
-pd.read_csv("dashboard/DataBaru.csv")
+all_df = pd.read_csv("dashboard/DataBaru.csv") 
 
 datetime_columns = ["dteday"]
 all_df.sort_values(by="dteday", inplace=True)
