@@ -3,5 +3,4 @@ pandas
 plotly
 matplotlib
 seaborn
-babel
-streamlit-option-menu
+scikit-learn

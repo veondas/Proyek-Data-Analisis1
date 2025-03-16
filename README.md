@@ -25,7 +25,7 @@ Proyek ini bertujuan untuk menganalisis dataset peminjaman sepeda (Bike Sharing 
 Jalankan perintah berikut di terminal:
 ```bash
 git clone https://github.com/veondas/Proyek-Data-Analisis1.git
-cd Proyek-Data-Analisis1
+cd Proyek-Analisis-Data1
 ```
 ### **2. Setup Environment - Anaconda**
 ```bash
@@ -35,8 +35,8 @@ pip install -r requirements.txt
 ```
 ### **3. Setup Environment - Shell/Terminal**
 ```bash
-mkdir Proyek-Data-Analisis1
-cd Proyek-Data-Analisis1
+mkdir Proyek-Analisis-Data1
+cd Proyek-Analisis-Data1
 pipenv install
 pipenv shell
 pip install -r requirements.txt
