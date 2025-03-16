@@ -113,7 +113,7 @@ st.pyplot(fig)
 #Visualisasi 3
 st.subheader("Pola Peminjaman Sepeda per Jam")
 
-hr_df = pd.read_csv("../dataset/hour.csv")
+hr_df = pd.read_csv("dataset/hour.csv") 
 
 # Grouping berdasarkan hari libur atau tidak
 holiday_group = hr_df.groupby(['holiday', 'hr'])['cnt'].mean().reset_index()
