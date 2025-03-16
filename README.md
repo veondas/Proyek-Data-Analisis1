@@ -14,7 +14,7 @@ Proyek ini bertujuan untuk menganalisis dataset peminjaman sepeda (Bike Sharing 
 |   |-- hour.csv             # Dataset dari tabel hour
 |   |-- Readme.md            # Dokumentasi dataset
 |
-|-- Proyek_Analisis_Data1.ipynb           # Analisis eksploratif dalam Jupyter Notebook
+|-- Proyek_Analisis_Data2.ipynb           # Analisis eksploratif dalam Jupyter Notebook
 |-- README.md                # Dokumentasi proyek
 |-- requirements.txt         # Daftar library yang dibutuhkan
 |-- url.txt                  # link streamlit
